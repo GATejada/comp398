@@ -1,6 +1,0 @@
-File includes:
-ReadMe.txt - File containg all contents of folder
-SalariesCleaned.txt - Space delimited file containg the 50 degress and theri begging salaries, mid career salaries, and
-average salaries.
-flatNode.h/salaryBase.h/salaryBase.cpp - Source files of the linked list
-398 hw_01.cpp - source program.
