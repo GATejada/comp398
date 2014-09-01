@@ -5,3 +5,5 @@ Folder includes the following:
 READMe.md - This file listing the contents of the folder
 
 state&TerritoryAbbr.csv - Space delimited flat file database used for lab
+
+plainTextOutput - Output created by driver program.
