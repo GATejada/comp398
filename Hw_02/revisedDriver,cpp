@@ -1,0 +1,72 @@
+// 398 hw_01.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <string>
+#include <iostream>
+#include "salaryBase.h"
+#include "flatNode.h"
+
+#include <assert.h>
+#include <fstream>
+ifstream FIN;
+ofstream fout;
+
+
+using namespace std;
+
+SALARY *create(string newState, string newAbbr); //Prototype of linked list
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	
+	const char TAB = '\t'; // TAB character to make formating easier
+	string fileName, fullPath;
+
+	
+	string outfileName = "stateAndTerritoryAbr.txt.csv";
+	fout.open(outfileName.c_str());
+	assert(fout.is_open());
+
+	fullPath = "flatDatabase/stateAndTerritoryAbr.txt"; // concat folder and filename
+	FIN.open(fullPath.c_str()); // open requires old-style C string
+
+	if (FIN.is_open())
+	{
+		string oneLine;
+
+		
+		getline(FIN, oneLine); // read one line from FIN stream
+		while (FIN)
+		{
+			cout << oneLine << endl; //prints line out 
+			getline(FIN, oneLine); //continues loop until there're no more lines
+			
+		}
+
+		FIN.close();
+
+
+	}
+	else
+		cout << "NASTY MESSAGE : " << fullPath << " didn't open!" << endl;
+
+		
+			return 0;
+}
+
+
+SALARY *create(string newState, string newAbbr) //Creates pointers in memory 
+{
+	SALARY *temp;
+	temp = new SALARY;
+	
+	temp = new SALARY;
+	temp->State = newState;
+	temp->Abbr = newAbbr;
+	
+	temp->next = 0;
+	return temp;
+}
+
+
