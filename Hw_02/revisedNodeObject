@@ -1,0 +1,20 @@
+#ifndef salaries
+#define salaries
+
+#include <string>
+
+using namespace std;
+
+typedef
+struct salaryList
+{
+
+
+	string State;
+	string Abbr;
+
+	struct salaryList *next;
+
+} SALARY;
+
+#endif
